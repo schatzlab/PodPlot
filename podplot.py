@@ -17,12 +17,10 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Plot minimum read length vs. coverage or % sequence. Coverage is plotted when -g is specified. ')
     parser.add_argument("fai", metavar="<fai.fofn>", type=str, help="A list of fai files. First column is the fai file and second column is the label.")
     parser.add_argument("-g", metavar="<genome_size>", type=int, default=0, help="expected genome size (no prefix symbols).")
-    #parser.add_argument("-y", action='store_true', default=False, help="Instead of covearage, y-axis is percentage of sequence.")
 
     args = parser.parse_args()
     fai_fofn = args.fai
     genome_size = args.g
-    #y = args.y
 
     print(whale)
 
