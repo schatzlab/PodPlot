@@ -1,6 +1,4 @@
 # PodPlot
-Plot coverage or percent of total sequence as a function of minimum read length
-
 ![](podplot.cov.png)
 
 ![](podplot.perc.png)
