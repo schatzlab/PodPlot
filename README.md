@@ -12,7 +12,7 @@
 ## Usage
 
 1. Convert fastq to fasta with [seqtk](https://github.com/lh3/seqtk).
-2. Make a fastq index with [samtools](http://www.htslib.org/).
+2. Make a fastq index with [samtools](https://github.com/samtools/samtools).
 3. List the fai files:
 
 ```
