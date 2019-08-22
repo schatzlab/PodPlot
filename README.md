@@ -22,4 +22,4 @@ reads.2.fasta.fai	Snowmane
 reads.3.fasta.fai	Bill
 ```
 
-4. `python3 podplot.py fai.fofn` of `python3 podplot.py -g 1500000000 fai.fofn`
+4. `python3 podplot.py fai.fofn` or `python3 podplot.py -g 1500000000 fai.fofn`
