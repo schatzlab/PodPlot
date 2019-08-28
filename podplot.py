@@ -4,7 +4,8 @@ import argparse
 import time
 
 import matplotlib.pyplot as plt
-
+import matplotlib
+matplotlib.use('Agg') 
 
 def log(message):
     """ Log messages to standard output. """
@@ -63,14 +64,14 @@ if __name__ == "__main__":
             for i in seqsums:
                 covs[i] = seqsums[i] / genome_size
             # Plot for this iteration
-            plt.scatter([xvals[i] for i in covs.keys()], covs.values(), s=100, alpha=0.5)
-            plt.plot([xvals[i] for i in covs.keys()], covs.values(), label=labels[fai], linewidth=3, alpha=0.5)
+            plt.scatter([xvals[i] for i in covs.keys()], list(covs.values()), s=100, alpha=0.5)
+            plt.plot([xvals[i] for i in covs.keys()], list(covs.values()), label=labels[fai], linewidth=3, alpha=0.5)
         else:
             total_seq = sum(sorted_lens)
             for i in seqsums:
                 percs[i] = (seqsums[i] / total_seq) * 100
-            plt.scatter([xvals[i] for i in percs.keys()], percs.values(), s=100, alpha=0.5)
-            plt.plot([xvals[i] for i in percs.keys()], percs.values(), label=labels[fai], linewidth=3, alpha=0.5)
+            plt.scatter([xvals[i] for i in percs.keys()], list(percs.values()), s=100, alpha=0.5)
+            plt.plot([xvals[i] for i in percs.keys()], list(percs.values()), label=labels[fai], linewidth=3, alpha=0.5)
 
     plt.legend(loc=1, prop={'size': 10})
     #plt.rc('axes', labelsize=BIGGER_SIZE)
