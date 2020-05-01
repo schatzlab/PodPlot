@@ -44,7 +44,7 @@ if __name__ == "__main__":
         read_lens = []
         with open(fai, 'r') as f:
             for line in f:
-                header, rlen, x, y, z = line.rstrip().split("\t")
+                rlen = line.rstrip().split("\t")[1]
                 read_lens.append(int(rlen))
 
         sorted_lens = sorted(read_lens, reverse=True)
