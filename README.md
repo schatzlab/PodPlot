@@ -11,9 +11,8 @@
 
 ## Usage
 
-1. Convert fastq to fasta with [seqtk](https://github.com/lh3/seqtk).
-2. Make a fasta index with [samtools](https://github.com/samtools/samtools).
-3. List the fai files:
+1. Make a fasta/fastq index with [samtools](https://github.com/samtools/samtools).
+2. List the index files:
 
 ```
 $ cat fai.fofn
