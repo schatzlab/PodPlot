@@ -6,6 +6,7 @@
 podplot (){
   awk '/^>/ {printf("\n%s\n",$0);next; } \
             { printf("%s",$0);} END {printf("\n");}' input.fasta > read.fasta
+
   declare -a sortheader=()
   for i in $(cat read.fasta | awk '/^>/ {print $1}' | sed "s/>//g");
   do 
@@ -17,9 +18,8 @@ podplot (){
      stringsort+=("${i}")
   done
   declare -a length=()
-  for i in $(cat read.fasta | awk '!/^>/ { print $1 }'); 
+  for i in $(cat less.fasta | awk '!/^>/ {print $1 }' | awk '{ print length($1) }'); 
   do 
-    length+=$(awk print $length($i))
+    length+=("${I}")
   done
- 
 }
